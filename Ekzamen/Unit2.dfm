@@ -6,8 +6,8 @@
   object ADOConnection1: TADOConnection
     Connected = True
     ConnectionString = 
-      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=E:\'#1069#1082#1079#1072#1084#1077#1085'\Win32\De' +
-      'bug\otdel_kadrov.mdb;Persist Security Info=False'
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=E:\rep\Ekzamen\Win3' +
+      '2\Debug\otdel_kadrov.mdb;Persist Security Info=False'
     LoginPrompt = False
     Mode = cmShareDenyNone
     Provider = 'Microsoft.Jet.OLEDB.4.0'
@@ -18,6 +18,9 @@
     Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
+    IndexFieldNames = #1050#1086#1076'_'#1087#1086#1076#1088#1072#1079#1076#1077#1083#1077#1085#1080#1103
+    MasterFields = #1050#1086#1076'_'#1087#1086#1076#1088#1072#1079#1076#1077#1083#1077#1085#1080#1103
+    MasterSource = DataSource4
     TableName = #1055#1086#1076#1088#1072#1079#1076#1077#1083#1077#1085#1080#1077
     Left = 24
     Top = 96
@@ -122,7 +125,7 @@
   object DataSource1: TDataSource
     DataSet = ADOTable1
     Left = 104
-    Top = 104
+    Top = 96
   end
   object DataSource2: TDataSource
     DataSet = ADOTable2

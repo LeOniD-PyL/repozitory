@@ -23,8 +23,6 @@ object Form7: TForm7
     Height = 155
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 313
-    ExplicitHeight = 143
     object Label1: TLabel
       Left = 81
       Top = 27
@@ -62,6 +60,7 @@ object Form7: TForm7
       Top = 24
       Width = 121
       Height = 21
+      MaxLength = 8
       TabOrder = 2
     end
     object Edit2: TEdit
@@ -69,6 +68,7 @@ object Form7: TForm7
       Top = 62
       Width = 121
       Height = 21
+      MaxLength = 10
       PasswordChar = '*'
       TabOrder = 3
     end

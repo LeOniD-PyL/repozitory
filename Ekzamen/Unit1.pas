@@ -14,6 +14,7 @@ type
     Button3: TButton;
     Button4: TButton;
     Button5: TButton;
+    Button6: TButton;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
@@ -21,6 +22,7 @@ type
     procedure Button5Click(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure Button6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -34,7 +36,7 @@ implementation
 
 {$R *.dfm}
 
-uses Unit4, Unit5, Unit6;
+uses Unit4, Unit5, Unit6, Unit9;
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
@@ -63,6 +65,12 @@ end;
 procedure TForm1.Button5Click(Sender: TObject);
 begin
   Application.MainForm.Close;
+end;
+
+procedure TForm1.Button6Click(Sender: TObject);
+begin
+ Form9.Show;
+ Hide;
 end;
 
 procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
