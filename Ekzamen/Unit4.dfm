@@ -31,6 +31,24 @@ object Form4: TForm4
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'ID'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = #1083#1086#1075#1080#1085
+        Width = 100
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = #1087#1072#1088#1086#1083#1100
+        Width = 100
+        Visible = True
+      end>
   end
   object DBNavigator1: TDBNavigator
     Left = 24

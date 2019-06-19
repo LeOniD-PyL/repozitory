@@ -1,13 +1,20 @@
 ﻿object DataModule2: TDataModule2
   OldCreateOrder = False
   OnCreate = DataModuleCreate
-  Height = 453
+  Height = 434
   Width = 163
   object ADOConnection1: TADOConnection
     Connected = True
     ConnectionString = 
       'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=E:\rep\Ekzamen\Win3' +
-      '2\Debug\otdel_kadrov.mdb;Persist Security Info=False'
+      '2\Debug\otdel_kadrov.mdb;Mode=Share Deny None;Persist Security I' +
+      'nfo=False;Jet OLEDB:System database="";Jet OLEDB:Registry Path="' +
+      '";Jet OLEDB:Database Password="";Jet OLEDB:Engine Type=5;Jet OLE' +
+      'DB:Database Locking Mode=1;Jet OLEDB:Global Partial Bulk Ops=2;J' +
+      'et OLEDB:Global Bulk Transactions=1;Jet OLEDB:New Database Passw' +
+      'ord="";Jet OLEDB:Create System Database=False;Jet OLEDB:Encrypt ' +
+      'Database=False;Jet OLEDB:Don'#39't Copy Locale on Compact=False;Jet ' +
+      'OLEDB:Compact Without Replica Repair=False;Jet OLEDB:SFP=False'
     LoginPrompt = False
     Mode = cmShareDenyNone
     Provider = 'Microsoft.Jet.OLEDB.4.0'
@@ -19,14 +26,11 @@
     Connection = ADOConnection1
     CursorType = ctStatic
     IndexFieldNames = #1050#1086#1076'_'#1087#1086#1076#1088#1072#1079#1076#1077#1083#1077#1085#1080#1103
-    MasterFields = #1050#1086#1076'_'#1087#1086#1076#1088#1072#1079#1076#1077#1083#1077#1085#1080#1103
-    MasterSource = DataSource4
     TableName = #1055#1086#1076#1088#1072#1079#1076#1077#1083#1077#1085#1080#1077
     Left = 24
     Top = 96
     object ADOTable1Код_подразделения: TAutoIncField
       FieldName = #1050#1086#1076'_'#1087#1086#1076#1088#1072#1079#1076#1077#1083#1077#1085#1080#1103
-      ReadOnly = True
     end
     object ADOTable1Название_подразделения: TWideStringField
       FieldName = #1053#1072#1079#1074#1072#1085#1080#1077'_'#1087#1086#1076#1088#1072#1079#1076#1077#1083#1077#1085#1080#1103
@@ -79,6 +83,7 @@
     Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
+    IndexFieldNames = #1050#1086#1076'_'#1087#1086#1076#1088#1072#1079#1076#1077#1083#1077#1085#1080#1103
     TableName = #1057#1086#1090#1088#1091#1076#1085#1080#1082#1080
     Left = 24
     Top = 288
@@ -143,7 +148,6 @@
     Top = 288
   end
   object ADOQuery1: TADOQuery
-    Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
     DataSource = DataSource2
@@ -163,7 +167,7 @@
     SQL.Strings = (
       'SELECT * '
       'FROM ['#1055#1086#1083#1100#1079#1086#1074#1072#1090#1077#1083#1080']')
-    Left = 64
+    Left = 72
     Top = 360
     object ADOQuery1ID: TAutoIncField
       FieldName = 'ID'

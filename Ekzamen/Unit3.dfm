@@ -31,6 +31,24 @@ object Form3: TForm3
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = #1050#1086#1076'_'#1087#1086#1076#1088#1072#1079#1076#1077#1083#1077#1085#1080#1103
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = #1053#1072#1079#1074#1072#1085#1080#1077'_'#1087#1086#1076#1088#1072#1079#1076#1077#1083#1077#1085#1080#1103
+        Width = 150
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = #1057#1083#1091#1078#1077#1073#1085#1099#1081' '#1090#1077#1083#1077#1092#1086#1085
+        Width = 150
+        Visible = True
+      end>
   end
   object DBNavigator1: TDBNavigator
     Left = 144

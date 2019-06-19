@@ -11,11 +11,13 @@ uses
 type
   TForm6 = class(TForm)
     DBGrid1: TDBGrid;
-    DBNavigator1: TDBNavigator;
     Button1: TButton;
+    Button6: TButton;
+    DBNavigator1: TDBNavigator;
     procedure Button1Click(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure Button6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -29,10 +31,20 @@ implementation
 
 {$R *.dfm}
 
+uses Unit9;
+
 procedure TForm6.Button1Click(Sender: TObject);
 begin
   Form1.Show;
   Hide;
+end;
+
+procedure TForm6.Button6Click(Sender: TObject);
+begin
+ Form9.Show;
+// Hide;
+ DataModule2.ADOTable4.Append;
+ DataModule2.ADOTable1.Append;
 end;
 
 procedure TForm6.FormClose(Sender: TObject; var Action: TCloseAction);

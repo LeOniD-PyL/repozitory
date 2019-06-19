@@ -36,6 +36,8 @@ implementation
 
 procedure TForm7.Button1Click(Sender: TObject);
 begin
+if (Length(Edit2.Text)>=6) then
+begin
   DataModule2.ADOQuery1.Close;
   DataModule2.ADOQuery1.SQL.Text :=
     'SELECT * FROM [Пользователи] WHERE [логин] = :p_login AND [пароль] = :p_passw';
@@ -61,13 +63,15 @@ begin
     begin
       MessageBox(handle, PChar('Неверный логин или пароль! Повторите ввод.'),
         PChar('Ошибка'), MB_ICONERROR + MB_OK);
-      Form7.Edit1.Text := '';
-      Form7.Edit2.Text := '';
     end;
   end
   else
     MessageBox(handle, PChar('Пустые поля логин\пароль не допускаются!'),
     PChar('Ошибка'), MB_ICONWARNING + MB_OK);
+end
+else
+MessageBox(handle, PChar('Пароль содержать должен не менее 6 символов.'),
+PChar('Ошибка'), MB_ICONWARNING + MB_OK);
 end;
 
 procedure TForm7.Button2Click(Sender: TObject);
@@ -77,13 +81,19 @@ end;
 
 procedure TForm7.Button3Click(Sender: TObject);
 begin
-DataModule2.ADOTable2.Insert;
-DataModule2.ADOTable2['Логин']:=Edit1.Text;
-DataModule2.ADOTable2['Пароль']:=Edit2.Text;
-DataModule2.ADOTable2.Post;
-Edit1.Clear;
-Edit2.Clear;
-MessageBox(handle, PChar('Новый пользователь зарегистрирован.'),PChar('Добро пожаловать'), MB_ICONASTERISK + MB_OK);
+if (Length(Edit2.Text)>=6) then
+ begin
+ DataModule2.ADOTable2.Insert;
+ DataModule2.ADOTable2['Логин']:=Edit1.Text;
+ DataModule2.ADOTable2['Пароль']:=Edit2.Text;
+ DataModule2.ADOTable2.Post;
+ Edit1.Clear;
+ Edit2.Clear;
+ MessageBox(handle, PChar('Новый пользователь зарегистрирован.'),PChar('Добро пожаловать'), MB_ICONASTERISK + MB_OK);
+ end
+else
+MessageBox(handle, PChar('Пароль содержать должен не менее 6 символов.'),
+PChar('Ошибка'), MB_ICONWARNING + MB_OK);
 end;
 
 end.
